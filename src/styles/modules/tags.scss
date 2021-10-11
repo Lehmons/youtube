@@ -1,0 +1,37 @@
+.tags {
+  display: flex;
+  position: fixed;
+  align-items: center;
+  top: 7rem;
+  left: 24rem;
+  width: calc(100% - 24rem);
+  height: 4rem;
+  background: white;
+  border-bottom: 1px solid $grey300;
+  padding-left: 2rem;
+  @include smallDesktopAndBelow {
+    top: 70px;
+    left: 240px;
+    width: calc(100% - 240px);
+    height: 40px;
+    padding-left: 20px;
+  }
+}
+
+.tags button {
+  white-space: nowrap;
+  border: 1px solid $grey400;
+  padding: 0.8rem 1rem;
+  border-radius: 1rem;
+  margin: 0 0.5rem;
+  @include smallDesktopAndBelow {
+    padding: 8px 10px;
+    border-radius: 10px;
+    margin: 0 5px;
+  }
+}
+
+.tags button.is-active {
+  background: black;
+  color: white;
+}

@@ -1,0 +1,55 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  width: 100%;
+  height: 100%;
+  padding-left: 28rem;
+  padding-right: 4rem;
+  padding-top: 12rem;
+  background: $grey100;
+  column-gap: 1.1rem;
+  @include smallDesktopAndBelow {
+    padding-left: 280px;
+    padding-right: 40px;
+    padding-top: 120px;
+  }
+  @include tabletLandscapeAndBelow {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @include tabletPortraitAndBelow {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @include mobileOnly {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+.grid img {
+  width: 100%;
+}
+
+.grid a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+}
+
+.grid a,
+.grid .stats span {
+  font-size: $p;
+  @include smallDesktopAndBelow {
+    font-size: $pMobile;
+  }
+}
+
+.grid .stats span {
+  display: block;
+  color: $grey500;
+}
+
+.grid .stats > span:nth-child(1) {
+  margin-top: 0.5rem;
+  @include smallDesktopAndBelow {
+    margin-top: 5px;
+  }
+}

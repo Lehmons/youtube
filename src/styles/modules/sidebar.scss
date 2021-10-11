@@ -1,0 +1,96 @@
+aside {
+  position: fixed;
+  top: 7rem;
+  left: 0;
+  width: 24rem;
+  height: calc(100vh - 7rem);
+  background: white;
+  overflow: auto;
+  @include smallDesktopAndBelow {
+    top: 70px;
+    width: 240px;
+    height: calc(100vh - 70px);
+  }
+}
+
+aside, aside .section {
+  display: flex;
+  flex-direction: column;
+}
+
+aside .section {
+  padding-bottom: 2.5rem;
+  border-bottom: 1px solid $grey300;
+  @include smallDesktopAndBelow {
+    padding-bottom: 25px;
+  }
+}
+
+aside .section + .section {
+  padding-top: 2.5rem;
+  @include smallDesktopAndBelow {
+    padding-top: 25px;
+  }
+}
+
+aside button {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 4rem;
+  background: white;
+  transition: background 0.25s ease-in-out;
+  @include smallDesktopAndBelow {
+    height: 40px;
+  }
+}
+
+aside button:hover {
+  background: $grey200;
+}
+
+aside button.is-active {
+  background: $grey300;
+}
+
+aside button > span:nth-child(1) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7.5rem;
+  height: 100%;
+  @include smallDesktopAndBelow {
+    width: 75px;
+  }
+}
+
+aside button > span:nth-child(2) {
+  font-size: $p;
+  @include smallDesktopAndBelow {
+    font-size: $pMobile;
+  }
+}
+
+aside button img {
+  width: 2.4rem;
+  height: 2.4rem;
+  @include smallDesktopAndBelow {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+aside .section h3 {
+  color: $grey600;
+  font-size: $smallCaps;
+  padding-left: 2.4rem;
+  display: block;
+  justify-content: left;
+  align-items: top;
+  font-weight: 500;
+  text-transform: uppercase;
+  @include smallDesktopAndBelow {
+    font-size: $smallCapsMobile;
+    padding-left: 24px;
+  }
+}
